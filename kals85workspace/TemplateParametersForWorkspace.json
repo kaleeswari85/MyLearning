@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "kals85workspace"
+		},
+		"kals85workspace-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:kals85workspace.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"kals85workspace-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://kals85swsdatalake.dfs.core.windows.net"
+		}
+	}
+}

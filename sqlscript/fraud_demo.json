@@ -1,13 +1,13 @@
 {
-	"name": "SQL script 1",
+	"name": "fraud_demo",
 	"properties": {
 		"content": {
-			"query": "",
+			"query": "-- BLOCK 1: Create database (run, then switch 'Connect to' dropdown to fraud_demo) \n\nCREATE DATABASE fraud_demo; \n\n \n\n-- BLOCK 2: Master key and credentials \n\nCREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Demo@Password123!'; \n\n \n\nCREATE DATABASE SCOPED CREDENTIAL adls_cred \n\n    WITH IDENTITY = 'Managed Identity'; \n\n \n\nCREATE EXTERNAL DATA SOURCE adls_raw \n\n    WITH ( LOCATION = 'abfss://raw@kals85swsdatalake.dfs.core.windows.net/transactions/', \n\n           CREDENTIAL = adls_cred ); \n\n \n\nCREATE EXTERNAL FILE FORMAT csv_fmt \n\n    WITH ( FORMAT_TYPE = DELIMITEDTEXT, \n\n           FORMAT_OPTIONS (FIELD_TERMINATOR = ',', FIRST_ROW = 2) ); \n\n \n\n-- BLOCK 3: External table for transactions ",
 			"metadata": {
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "master",
+				"databaseName": "fraud_demo",
 				"poolName": "Built-in"
 			},
 			"resultLimit": 5000

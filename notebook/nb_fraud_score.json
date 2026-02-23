@@ -17,7 +17,7 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "a8696937-e1f4-4c1c-b16d-0c0487a5b993"
+				"spark.autotune.trackingId": "50e4938a-f663-4764-a748-fe523de30f8b"
 			}
 		},
 		"metadata": {
@@ -71,7 +71,7 @@
 					"\n",
 					"# KEY PARAMETER — change this value to demonstrate Git versioning \n",
 					"\n",
-					"THRESHOLD = 0.75 \n",
+					"THRESHOLD = 0.80 \n",
 					"\n",
 					" \n",
 					"\n",
